@@ -1,0 +1,24 @@
+
+
+name: CI
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+ my-first-job:
+
+    runs-on: ubuntu-latest
+
+    
+    steps:
+    - name: checkout
+      uses: actions/checkout@v4
+
+    - name: print hello
+      run: echo Hello, world!
+
+    - name: show files
+      run: ls -la
+        
